@@ -5,7 +5,7 @@
       <input
         type="text"
         :value="budget > 0 ? budget : ''"
-        @change="onBudgetChange"
+        @input="onBudgetChange"
         id="search-input"
         class="search__input"
         placeholder="Write your budget">
@@ -33,7 +33,7 @@
             this.userBudgetUpdated(e.target.value);
         }
     },
-    mounted() {
+    mounted() { // Executed on component mount (obviously)
        this.loadList();
     },
     computed: {
